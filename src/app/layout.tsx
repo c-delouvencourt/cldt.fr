@@ -1,11 +1,11 @@
 import { type Metadata } from 'next'
-import { GoogleAnalytics } from '@next/third-parties/google'
 
 import { Providers } from '@/app/providers'
 import { Layout } from '@/components/Layout'
 
 import '@/styles/tailwind.css'
 import Script from "next/script";
+import GoogleAnalytics from "@/lib/analytics";
 
 export const metadata: Metadata = {
   title: {
