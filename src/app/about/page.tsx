@@ -77,11 +77,11 @@ export default function About() {
               <p>
                 I run a lot, and I’m always looking for new ways to improve my
                 time. Im preparing for my first marathon in 2025, and I’m excited
-                to see how far I can push myself. I’m also a big fan of the
-                outdoors and love to go hiking whenever I can.
+                to see how far I can push myself. I’m also a big fan of
+                outdoors activities and love to go hiking whenever I can.
               </p>
               <p>
-                I'm passionate about music also, I compose music. The music is a
+                I'm passionate about music also, I compose music. The music is an
                 exit for me, I can express my feelings and my emotions.
               </p>
               <p>
