@@ -1,9 +1,11 @@
 import { type Metadata } from 'next'
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 import { Providers } from '@/app/providers'
 import { Layout } from '@/components/Layout'
 
 import '@/styles/tailwind.css'
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: {
@@ -34,6 +36,7 @@ export default function RootLayout({
           </div>
         </Providers>
       </body>
+      <GoogleAnalytics/>
     </html>
   )
 }
