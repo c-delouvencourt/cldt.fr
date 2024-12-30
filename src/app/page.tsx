@@ -275,7 +275,7 @@ export default async function Home() {
               Software engineer, entrepreneur, and amateur runner.
             </h1>
             <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-              I’m Clément, a software designer and entrepreneur based in Paris. I’m the CTO of MeilleursBiens, where we
+              I’m Clément, a software designer and entrepreneur based in the South of France (sometimes in Paris). I’m the CTO of MeilleursBiens, where we
               develop
               technologies that enable real estate pros to save twice as much time and money in their business.
             </p>
@@ -301,7 +301,6 @@ export default async function Home() {
                   aria-label="Follow on GitHub"
                   icon={GitHubIcon}
               />
-              <SocialLink href="https://x.com/cdlt_fr" aria-label="Follow on X" icon={XIcon}/>
               <SocialLink
                   href="https://www.instagram.com/clementdlc/"
                   aria-label="Follow on Instagram"

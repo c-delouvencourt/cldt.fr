@@ -1,0 +1,168 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+import designSystem from './img.png'
+
+export const article = {
+  author: 'Clément de Louvencourt',
+  date: '2024-12-30',
+  title: 'Structuring and Maintaining a Large React Project with Nx Workspace',
+  description:
+    '🚀 Managing large-scale React projects can often feel like navigating a maze of complexities, but with the right tools, you can transform challenges into opportunities. Nx Workspace emerges as a game-changer in this domain, offering a streamlined way to structure, develop, and maintain expansive codebases. Whether you\'re building a monorepo from scratch or scaling an existing one, this guide will equip you with actionable insights to leverage Nx Workspace\'s full potential. 🌟',
+}
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+}
+
+export default (props) => <ArticleLayout article={article} {...props} />
+
+🚀 Managing large-scale React projects can often feel like navigating a maze of complexities, but with the right tools, you can transform challenges into opportunities. Nx Workspace emerges as a game-changer in this domain, offering a streamlined way to structure, develop, and maintain expansive codebases. Whether you're building a monorepo from scratch or scaling an existing one, this guide will equip you with actionable insights to leverage Nx Workspace's full potential. 🌟
+
+<Image src={designSystem} alt="" />
+
+# Structuring and Maintaining a Large React Project with Nx Workspace
+
+⚙️ As a software engineer, managing a large React project can be challenging. Nx Workspace is a powerful tool that helps you structure and maintain your project efficiently. In this article, we'll explore how to use Nx Workspace to organize your React project, streamline development, and ensure maintainability. 🚀
+
+## What is Nx Workspace? 🛠️
+
+Nx Workspace is a set of extensible dev tools for monorepos, which helps you manage multiple projects and libraries within a single repository. It provides powerful features like code generation 🧑‍💻, dependency graph visualization 📊, and task running 🏃, making it an excellent choice for large-scale React projects. 📂
+
+## Setting Up Nx Workspace ⚡
+
+To get started with Nx Workspace, you need to install the Nx CLI and create a new workspace:
+
+```bash
+npx create-nx-workspace@latest my-workspace
+cd my-workspace
+```
+
+Follow the prompts to choose a preset that fits your needs. For a React project, select the appropriate preset (e.g., `React` or `React + Express`). 🎨
+
+### Adding Applications and Libraries 🏗️
+
+In an Nx Workspace, you can divide your codebase into applications and libraries:
+
+- **Applications**: Represent runnable units, like your main React app or server. 🖥️
+- **Libraries**: Contain reusable code, such as UI components, utility functions, or state management logic. 🔄
+
+To generate a new library:
+
+```bash
+nx generate library my-lib
+```
+
+You can also generate a new application:
+
+```bash
+nx generate application my-app
+```
+
+## Organizing Your Codebase 📂
+
+### Modular Architecture 🏛️
+
+Structure your workspace to follow a modular architecture, with clearly defined domains. For example:
+
+- `apps/`: Contains your applications. 📱
+- `libs/`: Contains shared libraries, organized by domain or feature. 📦
+
+Example structure:
+
+```
+my-workspace/
+  apps/
+    my-app/
+  libs/
+    ui/
+    data-access/
+    feature-login/
+```
+
+### Dependency Management 🔗
+
+Nx provides a dependency graph to visualize and manage relationships between apps and libraries. Run the following command to generate the graph:
+
+```bash
+nx dep-graph
+```
+
+Use this graph to identify and prevent circular dependencies, ensuring a clean and maintainable codebase. 🌀
+
+## Streamlining Development ⚡
+
+### Task Running 🏃‍♂️
+
+Nx allows you to run tasks like building, testing, and linting efficiently. For example, to run tests for a specific library:
+
+```bash
+nx test my-lib
+```
+
+You can also use Nx's affected commands to run tasks only for projects affected by recent changes:
+
+```bash
+nx affected:test
+```
+
+### Code Generation ✍️
+
+Use Nx generators to create boilerplate code quickly. For instance, to generate a new React component:
+
+```bash
+nx generate component my-component --project=my-lib
+```
+
+### Consistent Coding Standards ✅
+
+Enforce consistent coding standards using tools like ESLint and Prettier, integrated into your Nx Workspace. Configure these tools in the `workspace.json` or project-specific configuration files. 🧹
+
+## Ensuring Maintainability 🔧
+
+### Testing 🧪
+
+Nx integrates with Jest for unit testing and Cypress for end-to-end testing. Organize your tests within the respective applications or libraries:
+
+```bash
+apps/
+  my-app/
+    src/
+      app/
+        app.spec.ts
+libs/
+  ui/
+    src/
+      lib/
+        button.spec.ts
+```
+
+Run tests regularly and maintain high code coverage to catch issues early. 🚨
+
+### Documentation 📖
+
+Document your libraries and applications to make it easier for team members to understand and contribute. Use tools like Storybook for documenting UI components:
+
+```bash
+nx storybook my-lib
+```
+
+### Continuous Integration/Deployment (CI/CD) 🤖
+
+Integrate Nx with your CI/CD pipeline to automate tasks like building, testing, and deploying. Nx provides commands to optimize builds for CI/CD environments:
+
+```bash
+nx affected:build
+```
+
+## Conclusion 🌟
+
+Nx Workspace is a robust solution for managing large React projects, offering tools to enhance organization, streamline development, and ensure maintainability. By adopting Nx, you can simplify your workflow and focus on building high-quality software. Start using Nx Workspace today to unlock the full potential of your React projects! 🚀
+
+
+
+
+
+
+
+
+
