@@ -47,8 +47,8 @@ export default function Uses() {
       >
         <div className="space-y-20">
           <ToolsSection title="Workstation">
-            <Tool title="15” MacBook Pro, M1 Pro, 16GB RAM">
-              I was using an Intel-based 13” MacBook Pro prior to this and the
+            <Tool title="16” MacBook Pro, M4 Pro, 24GB RAM">
+              I was using an M4 Pro 16” MacBook Pro prior to this and the
               difference is night and day. I’ve never heard the fans turn on a
               single time, even under the incredibly heavy loads I put it through
               with our various launch simulations.
